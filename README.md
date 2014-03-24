@@ -33,7 +33,7 @@ Cookies
 ; or
 
 (defn handler [req]
-  (cookie/set "session-id" "12345"))
+  (cookie/put! "session-id" "12345"))
 
 (defn site []
   (-> handler
@@ -56,7 +56,7 @@ Sessions
 ; or
 
 (defn handler [req]
-  (session/set "user" {:name "Billy" :id 12345}))
+  (session/put! "user" {:name "Billy" :id 12345}))
 
 (defn site []
   (-> handler
